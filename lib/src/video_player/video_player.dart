@@ -203,6 +203,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
       bufferingConfiguration: bufferingConfiguration,
     );
     _creatingCompleter.complete(null);
+    notifyListeners();
 
     unawaited(_applyLooping());
     unawaited(_applyVolume());
